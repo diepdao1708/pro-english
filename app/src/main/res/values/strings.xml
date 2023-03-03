@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Star English</string>
+    <string name="can_not_get_account">Can\'t get account information. Please try again.</string>
+    <string name="check_network">Please check network connection</string>
+    <string name="try_again">Error has occurred. Please try again.</string>
+    <string name="log_out_success">Log out success</string>
+    <string name="log_out_failure">Log out failure</string>
+    <string name="log_in_success">Log in success</string>
+    <string name="log_in_failure">Log in failure</string>
+    <string name="register_success">Register success</string>
+    <string name="register_failure">Register failure</string>
+</resources>
