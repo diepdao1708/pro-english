@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Star English</string>
+    <string name="app_name">Pro English</string>
     <string name="can_not_get_account">Can\'t get account information. Please try again.</string>
     <string name="check_network">Please check network connection</string>
     <string name="try_again">Error has occurred. Please try again.</string>
