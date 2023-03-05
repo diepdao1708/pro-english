@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.proenglish.features.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/dictionaryFragment"
+        android:name="com.example.proenglish.features.dictionary.DictionaryFragment"
+        android:label="DictionaryFragment"
+        tools:layout="@layout/fragment_dictionary" />
+    <fragment
+        android:id="@+id/examFragment"
+        android:name="com.example.proenglish.features.exam.ExamFragment"
+        android:label="ExamFragment"
+        tools:layout="@layout/fragment_exam" />
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.example.proenglish.features.user.UserFragment"
+        android:label="UserFragment"
+        tools:layout="@layout/fragment_user" />
+</navigation>

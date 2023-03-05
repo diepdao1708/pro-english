@@ -5,13 +5,19 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 import com.example.proenglish.R
 import com.example.proenglish.databinding.ActivityMainBinding
 import com.example.proenglish.features.login.LoginActivity
 import com.example.proenglish.utils.AppEvent
 import com.example.proenglish.utils.hideKeyboard
+import com.example.proenglish.utils.setKeyboardVisibilityListener
 import dagger.hilt.android.AndroidEntryPoint
+import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
 
@@ -20,6 +26,12 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private val viewModel: MainViewModel by viewModels()
+    private val navHostFragment: NavHostFragment by lazy {
+        supportFragmentManager.findFragmentById(R.id.fragment_view) as NavHostFragment
+    }
+    private val navController: NavController by lazy {
+        navHostFragment.navController
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +39,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.viewModel = viewModel
+
+        binding.bottomNavigationView.apply {
+            setupWithNavController(navController)
+            setKeyboardVisibilityListener { visibility ->
+                binding.bottomNavigationView.isVisible = !visibility
+            }
+        }
 
         viewModel.event.observe(this) { event ->
             when (event) {
@@ -44,6 +63,16 @@ class MainActivity : AppCompatActivity() {
         if (event is AppEvent.LogOut) {
             viewModel.logOut()
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        EventBus.getDefault().register(this)
+    }
+
+    override fun onStop() {
+        super.onStop()
+        EventBus.getDefault().unregister(this)
     }
 
     private fun backToLogin() {

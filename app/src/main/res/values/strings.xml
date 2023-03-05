@@ -9,4 +9,8 @@
     <string name="log_in_failure">Log in failure</string>
     <string name="register_success">Register success</string>
     <string name="register_failure">Register failure</string>
+    <string name="home">Home</string>
+    <string name="dictionary">Dictionary</string>
+    <string name="exam">Exam</string>
+    <string name="user">User</string>
 </resources>
