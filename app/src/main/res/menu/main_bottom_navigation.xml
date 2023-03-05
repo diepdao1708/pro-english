@@ -4,22 +4,22 @@
     <item
         android:id="@+id/homeFragment"
         android:enabled="true"
-        android:icon="@drawable/icon_home"
+        android:icon="@drawable/home_outline"
         android:title="@string/home" />
 
     <item
         android:id="@+id/dictionaryFragment"
-        android:icon="@drawable/icon_home"
+        android:icon="@drawable/dictionary_outline"
         android:title="@string/dictionary" />
 
     <item
         android:id="@+id/examFragment"
-        android:icon="@drawable/icon_home"
+        android:icon="@drawable/exam_outline"
         android:title="@string/exam" />
 
     <item
         android:id="@+id/userFragment"
-        android:icon="@drawable/icon_home"
+        android:icon="@drawable/user_outline"
         android:title="@string/user" />
 
 </menu>
