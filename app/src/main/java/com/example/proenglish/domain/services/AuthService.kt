@@ -9,7 +9,7 @@ interface AuthService {
     @POST("/api/v1/auth/login")
     suspend fun login(@Body loginRequest: LoginRequest): CommonResponse<LoginData>
 
-    @GET("/api/v1/auth/")
+    @GET("/api/v1/auth")
     suspend fun getCurrentUser(): CommonResponse<UserData>
 
     @POST("/api/v1/auth/google")

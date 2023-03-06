@@ -1,7 +1,6 @@
 package com.example.proenglish.di
 
-import com.example.proenglish.domain.repositories.AuthRepository
-import com.example.proenglish.domain.repositories.AuthRepositoryImpl
+import com.example.proenglish.domain.repositories.*
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -14,6 +13,22 @@ abstract class RepositoryModule {
 
     @Binds
     @Singleton
-    abstract fun bindAuthRepository(authRepository: AuthRepositoryImpl): AuthRepository
+    abstract fun bindAuthRepository(authRepositoryImpl: AuthRepositoryImpl): AuthRepository
+
+    @Binds
+    @Singleton
+    abstract fun bindUserRepository(userRepositoryImpl: UserRepositoryImpl): UserRepository
+
+    @Binds
+    @Singleton
+    abstract fun bindDictionaryRepository(dictionaryRepositoryImpl: DictionaryRepositoryImpl): DictionaryRepository
+
+    @Binds
+    @Singleton
+    abstract fun bindPostRepository(postRepositoryImpl: PostRepositoryImpl): PostRepository
+
+    @Binds
+    @Singleton
+    abstract fun bindQuestionRepository(questionRepositoryImpl: QuestionRepositoryImpl): QuestionRepository
 
 }

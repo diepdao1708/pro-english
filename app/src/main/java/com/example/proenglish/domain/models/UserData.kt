@@ -1,9 +1,12 @@
 package com.example.proenglish.domain.models
 
+import com.google.gson.annotations.SerializedName
+
 data class UserData(
     val role: String,
     val score: Long,
-    val _id: String,
+    @SerializedName("_id")
+    val id: String,
     val email: String,
     val fullname: String,
 )
