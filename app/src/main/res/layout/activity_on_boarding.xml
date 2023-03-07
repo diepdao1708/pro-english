@@ -1,9 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".features.onboarding.OnBoardingActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.proenglish.features.onboarding.OnBoardingViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        tools:context=".features.onboarding.OnBoardingActivity">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/onboard_view_page"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/background_view_page"
+            app:layout_constraintBottom_toTopOf="@id/center_of_next_button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/indicators_linear_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_large"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/center_of_next_button"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            app:layout_constraintBottom_toBottomOf="@id/next_button"
+            app:layout_constraintEnd_toEndOf="@id/next_button"
+            app:layout_constraintStart_toStartOf="@id/next_button"
+            app:layout_constraintTop_toTopOf="@id/next_button" />
+
+        <ImageButton
+            android:id="@+id/next_button"
+            android:layout_width="@dimen/icon_button"
+            android:layout_height="@dimen/icon_button"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:background="@drawable/background_icon"
+            android:contentDescription="@string/app_name"
+            android:elevation="@dimen/elevation"
+            android:src="@drawable/arrow"
+            app:layout_constraintBottom_toTopOf="@id/get_started_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tint="@color/white" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/get_started_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:backgroundTint="@color/theme_light_inverseSurface"
+            android:fontFamily="@font/roboto_medium"
+            android:onClick="@{() -> viewModel.navigateToRegister()}"
+            android:text="@string/get_started"
+            app:layout_constraintBottom_toTopOf="@id/login_button"
+            app:layout_constraintEnd_toEndOf="@id/login_button"
+            app:layout_constraintStart_toStartOf="@id/login_button" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:backgroundTint="#1F1F1F1F"
+            android:fontFamily="@font/roboto_medium"
+            android:onClick="@{() -> viewModel.navigateToLogin()}"
+            android:text="@string/i_already_have_an_account"
+            android:textColor="#FF201A1B"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

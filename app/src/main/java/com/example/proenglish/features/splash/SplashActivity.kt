@@ -9,7 +9,8 @@ import android.os.Looper
 import androidx.activity.viewModels
 import com.example.proenglish.features.main.MainActivity
 import com.example.proenglish.R
-import com.example.proenglish.features.login.LoginActivity
+import com.example.proenglish.features.onboarding.OnBoardingActivity
+import com.example.proenglish.features.splash.SplashViewModel.*
 import dagger.hilt.android.AndroidEntryPoint
 
 @SuppressLint("CustomSplashScreen")
@@ -24,8 +25,8 @@ class SplashActivity : AppCompatActivity() {
 
         viewModel.event.observe(this) {
             when (it) {
-                SplashViewModel.Event.NavigateToLogin -> navigateTo(LoginActivity::class.java)
-                SplashViewModel.Event.NavigateToHome -> navigateTo(MainActivity::class.java)
+                Event.NavigateToHome -> navigateTo(MainActivity::class.java)
+                Event.NavigateToOnBoarding -> navigateTo(OnBoardingActivity::class.java)
             }
         }
 

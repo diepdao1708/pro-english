@@ -20,8 +20,8 @@ class SplashViewModel @Inject constructor(
     }
 
     sealed class Event {
-        object NavigateToLogin : Event()
         object NavigateToHome : Event()
+        object NavigateToOnBoarding : Event()
     }
 
     private val _event = MutableLiveData<Event>()
@@ -33,7 +33,7 @@ class SplashViewModel @Inject constructor(
         when {
             accessToken == DEFAULT_VALUE
                     || accessToken == null
-                    || JWTHelper.expiredAccessToken(accessToken) -> _event.postValue(Event.NavigateToLogin)
+                    || JWTHelper.expiredAccessToken(accessToken) -> _event.postValue(Event.NavigateToOnBoarding)
             else -> _event.postValue(Event.NavigateToHome)
         }
     }

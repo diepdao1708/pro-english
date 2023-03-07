@@ -14,7 +14,7 @@ object LoadingUtils {
     fun showLoading(context: Context, text: String? = null, cancelable: Boolean = false): Dialog {
         val dialog = Dialog(context)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dialog.setContentView(R.layout.layout_loading_screen)
+        dialog.setContentView(R.layout.loading)
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.setCancelable(cancelable)
         if (text != null) {
