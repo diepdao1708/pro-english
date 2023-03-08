@@ -3,6 +3,6 @@
     android:shape="rectangle">
     <gradient
         android:angle="270"
-        android:endColor="@color/theme_light_inverseOnSurface"
-        android:startColor="@color/theme_light_surfaceVariant" />
+        android:startColor="@color/theme_light_surfaceVariant"
+        android:endColor="@color/theme_light_secondaryContainer" />
 </shape>

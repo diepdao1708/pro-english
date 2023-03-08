@@ -34,4 +34,5 @@
     <color name="theme_light_outline">#FF7F747C</color>
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
+    <color name="dark_color_text">#FF201A1B</color>
 </resources>

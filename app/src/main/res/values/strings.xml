@@ -17,4 +17,8 @@
     <!--  OnBoarding  -->
     <string name="get_started">GET STARTED</string>
     <string name="i_already_have_an_account">I ALREADY HAVE AN ACCOUNT</string>
+
+    <!--  Home  -->
+    <string name="success">success</string>
+    <string name="failure">failure</string>
 </resources>

@@ -27,7 +27,7 @@
         <item name="colorOnSurfaceInverse">@color/theme_light_inverseOnSurface</item>
         <item name="colorSurfaceInverse">@color/theme_light_inverseSurface</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">@color/theme_light_inverseOnSurface</item>
+        <item name="android:statusBarColor">@color/theme_light_surfaceVariant</item>
         <item name="android:windowLightStatusBar">true</item>
     </style>
 

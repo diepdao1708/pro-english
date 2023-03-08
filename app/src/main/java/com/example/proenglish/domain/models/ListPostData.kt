@@ -15,6 +15,6 @@ data class PostData(
     val title: String,
     val description: String,
     val content: String,
-    @SerializedName("createAt")
+    @SerializedName("createdAt")
     val createdAt: Date,
 )

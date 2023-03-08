@@ -5,21 +5,18 @@ import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.view.Window
-import android.widget.TextView
 import com.example.proenglish.R
 
 object LoadingUtils {
 
     private var dialog: Dialog? = null
-    fun showLoading(context: Context, text: String? = null, cancelable: Boolean = false): Dialog {
+    fun showLoading(context: Context, cancelable: Boolean = false): Dialog {
         val dialog = Dialog(context)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setContentView(R.layout.loading)
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.setCancelable(cancelable)
-        if (text != null) {
-            dialog.findViewById<TextView>(R.id.text).text = text
-        }
+
         dialog.show()
         this.dialog = dialog
         return dialog

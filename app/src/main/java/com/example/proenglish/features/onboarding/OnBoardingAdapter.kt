@@ -30,7 +30,7 @@ class OnBoardingAdapter(
         val binding =
             OnboardingItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         binding.lifecycleOwner = parent.lifecycleOwner()
-        return OnBoardingViewHolder((binding))
+        return OnBoardingViewHolder(binding)
     }
 
     override fun getItemCount(): Int {

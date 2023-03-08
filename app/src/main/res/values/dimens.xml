@@ -10,6 +10,10 @@
     <dimen name="margin_medium">12dp</dimen>
     <dimen name="margin_small">6dp</dimen>
     <dimen name="elevation">6dp</dimen>
+    <dimen name="padding_large">24dp</dimen>
+    <dimen name="padding_medium">12dp</dimen>
+    <dimen name="padding_small">6dp</dimen>
+    <dimen name="loading">48dp</dimen>
 
     <dimen name="label_small">11sp</dimen>
     <dimen name="label_medium">12sp</dimen>
@@ -20,7 +24,7 @@
     <dimen name="title_small">14sp</dimen>
     <dimen name="title_medium">16sp</dimen>
     <dimen name="title_large">22sp</dimen>
-    <dimen name="headline_small">24</dimen>
+    <dimen name="headline_small">24sp</dimen>
     <dimen name="headline_medium">28sp</dimen>
     <dimen name="headline_large">32sp</dimen>
     <dimen name="display_small">36sp</dimen>
