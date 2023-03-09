@@ -19,6 +19,12 @@
     <string name="i_already_have_an_account">I ALREADY HAVE AN ACCOUNT</string>
 
     <!--  Home  -->
-    <string name="success">success</string>
-    <string name="failure">failure</string>
+    <string name="post_success">post success</string>
+    <string name="post_failure">post failure</string>
+
+    <!--  User  -->
+    <string name="leaderboard_success">leaderboard success</string>
+    <string name="leaderboard_failure">leaderboard failure</string>
+    <string name="user_success">user success</string>
+    <string name="user_failure">user failure</string>
 </resources>

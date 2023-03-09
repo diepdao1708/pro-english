@@ -1,6 +1,6 @@
 package com.example.proenglish.domain.repositories
 
-import com.example.proenglish.domain.models.LeaderBoardData
+import com.example.proenglish.domain.models.LeaderboardData
 import com.example.proenglish.domain.models.ScoreData
 import com.example.proenglish.domain.services.UserService
 import retrofit2.Retrofit
@@ -8,7 +8,7 @@ import javax.inject.Inject
 
 interface UserRepository {
     suspend fun updateScore(score: Int): Result<ScoreData>
-    suspend fun getLeaderBoard(): Result<LeaderBoardData>
+    suspend fun getLeaderboard(): Result<LeaderboardData>
 }
 
 class UserRepositoryImpl @Inject constructor(
@@ -27,9 +27,9 @@ class UserRepositoryImpl @Inject constructor(
         }
     }
 
-    override suspend fun getLeaderBoard(): Result<LeaderBoardData> {
+    override suspend fun getLeaderboard(): Result<LeaderboardData> {
         return try {
-            val response = service.getLeaderBoard()
+            val response = service.getLeaderboard()
             Result.success(response.data)
         } catch (e: Exception) {
             Result.failure(e)

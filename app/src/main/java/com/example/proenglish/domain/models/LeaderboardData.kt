@@ -2,7 +2,7 @@ package com.example.proenglish.domain.models
 
 import com.google.gson.annotations.SerializedName
 
-data class LeaderBoardData(
+data class LeaderboardData(
     val page: Int,
     val limit: Int,
     @SerializedName("totalPages")

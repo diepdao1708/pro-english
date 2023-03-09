@@ -50,7 +50,7 @@ class HomeViewModel @Inject constructor(
                     }
                 }
                 .onFailure {
-                    _uiState.update { it.copy(messageResId = R.string.failure) }
+                    _uiState.update { it.copy(messageResId = R.string.post_failure) }
                 }
             delay(500)
             _uiState.update { it.copy(isLoading = false) }
