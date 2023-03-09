@@ -32,7 +32,6 @@ fun Activity.hideKeyboard() {
     }
 }
 
-// https://stackoverflow.com/a/36259261
 fun Activity.setKeyboardVisibilityListener(onVisibilityChanged: (Boolean) -> Unit) {
     val parentView = (findViewById<View>(android.R.id.content) as ViewGroup).getChildAt(0)
     parentView.viewTreeObserver.addOnGlobalLayoutListener(object :
@@ -51,7 +50,6 @@ fun Activity.setKeyboardVisibilityListener(onVisibilityChanged: (Boolean) -> Uni
             val heightDiff: Int = parentView.rootView.height - (rect.bottom - rect.top)
             val isShown = heightDiff >= estimatedKeyboardHeight
             if (isShown == alreadyOpen) {
-                // "Keyboard state: Ignoring global layout change..."
                 return
             }
             alreadyOpen = isShown

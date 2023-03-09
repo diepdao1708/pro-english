@@ -1,10 +1,11 @@
 package com.example.proenglish.features.main
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
@@ -47,6 +48,14 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            when (destination.id) {
+                R.id.homeFragment, R.id.dictionaryFragment, R.id.examFragment, R.id.userFragment -> showBottomNavigation()
+                else -> hideBottomNavigation()
+            }
+
+        }
+
         viewModel.event.observe(this) { event ->
             when (event) {
                 is MainViewModel.Event.LogOut -> backToLogin()
@@ -56,6 +65,16 @@ class MainActivity : AppCompatActivity() {
         viewModel.message.observe(this) { message ->
             Toast.makeText(this, getString(message), Toast.LENGTH_SHORT).show()
         }
+    }
+
+    private fun hideBottomNavigation() {
+        binding.bottomNavigationView.visibility = View.GONE
+
+    }
+
+    private fun showBottomNavigation() {
+        binding.bottomNavigationView.visibility = View.VISIBLE
+
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)

@@ -10,6 +10,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 
 class PostAdapter(
     private var posts: List<PostItemUiState> = emptyList(),
+    private val listener: OnClickListener,
 ) : RecyclerView.Adapter<PostAdapter.PostViewHolder>() {
 
     inner class PostViewHolder(val binding: PostItemBinding) :
@@ -23,6 +24,12 @@ class PostAdapter(
 
         fun bind(postItemUiState: PostItemUiState) {
             cachedItem.value = postItemUiState
+        }
+
+        fun onItemClick() {
+            binding.cardView.setOnClickListener {
+                listener.onItemClick(adapterPosition)
+            }
         }
     }
 
@@ -38,12 +45,19 @@ class PostAdapter(
     }
 
     override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
-        holder.bind(posts[position])
+        holder.apply {
+            bind(posts[position])
+            onItemClick()
+        }
     }
 
     @SuppressLint("NotifyDataSetChanged")
     fun reloadData(posts: List<PostItemUiState>) {
         this.posts = posts
         notifyDataSetChanged()
+    }
+
+    interface OnClickListener {
+        fun onItemClick(position: Int)
     }
 }

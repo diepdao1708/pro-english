@@ -11,6 +11,7 @@ import com.example.proenglish.features.main.MainActivity
 import com.example.proenglish.R
 import com.example.proenglish.features.onboarding.OnBoardingActivity
 import com.example.proenglish.features.splash.SplashViewModel.*
+import com.example.proenglish.utils.setFullScreen
 import dagger.hilt.android.AndroidEntryPoint
 
 @SuppressLint("CustomSplashScreen")
@@ -22,6 +23,7 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
+        setFullScreen()
 
         viewModel.event.observe(this) {
             when (it) {
