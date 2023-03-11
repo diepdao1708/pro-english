@@ -27,4 +27,11 @@
     <string name="leaderboard_failure">leaderboard failure</string>
     <string name="user_success">user success</string>
     <string name="user_failure">user failure</string>
+
+    <!--  Dictionary  -->
+    <string name="dictionary_success">dictionary success</string>
+    <string name="dictionary_failure">dictionary failure</string>
+    <string name="search">Search</string>
+    <string name="uk">UK</string>
+    <string name="us">US</string>
 </resources>

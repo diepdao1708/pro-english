@@ -1,24 +1,25 @@
 package com.example.proenglish.domain.models
 
+import com.google.gson.annotations.SerializedName
+
 data class DictionaryData(
     val word: String,
-    val phonetics: List<Phonetics>,
-    val meanings: List<Meanings>,
+    val phonetics: List<Phonetic>,
+    val meanings: List<Meaning>,
 )
 
-data class Phonetics(
-    val text: String,
+data class Phonetic(
+    val text: String?,
     val audio: String,
 )
 
-data class Meanings(
+data class Meaning(
+    @SerializedName("partOfSpeech")
     val partOfSpeech: String,
-    val definitions: List<Definitions>,
+    val definitions: List<Definition>,
 )
 
-data class Definitions(
+data class Definition(
     val definition: String,
-    val example: String,
-    val synonyms: List<String>,
-    val antonyms: List<String>,
+    val example: String?,
 )

@@ -6,7 +6,7 @@ import retrofit2.Retrofit
 import javax.inject.Inject
 
 interface DictionaryRepository {
-    suspend fun takeMeaning(word: String): Result<DictionaryData>
+    suspend fun takeMeaning(word: String): Result<List<DictionaryData>>
 }
 
 class DictionaryRepositoryImpl @Inject constructor(
@@ -15,7 +15,7 @@ class DictionaryRepositoryImpl @Inject constructor(
 
     private val service = retrofit.create(DictionaryService::class.java)
 
-    override suspend fun takeMeaning(word: String): Result<DictionaryData> {
+    override suspend fun takeMeaning(word: String): Result<List<DictionaryData>> {
         return try {
             val response = service.takeMeaning(word)
             Result.success(response)

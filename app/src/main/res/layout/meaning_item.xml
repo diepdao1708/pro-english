@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="kotlinx.coroutines.flow.StateFlow" />
+
+        <import type="com.example.proenglish.features.dictionary.MeaningItemUiState" />
+
+        <variable
+            name="item"
+            type="StateFlow&lt;MeaningItemUiState>" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/part_of_speech_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{item.partOfSpeech}"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/definition_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/part_of_speech_txt" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
