@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.proenglish.databinding.DefinitionItemBinding
+import com.example.proenglish.databinding.ItemDefinitionBinding
 import com.example.proenglish.utils.lifecycleOwner
 import kotlinx.coroutines.flow.MutableStateFlow
 
@@ -13,7 +13,7 @@ class DefinitionAdapter(
 ) :
     RecyclerView.Adapter<DefinitionAdapter.DefinitionViewHolder>() {
 
-    inner class DefinitionViewHolder(val binding: DefinitionItemBinding) :
+    inner class DefinitionViewHolder(val binding: ItemDefinitionBinding) :
         RecyclerView.ViewHolder(binding.root) {
         private val cachedItem = MutableStateFlow<DefinitionItemUiState?>(null)
 
@@ -28,7 +28,7 @@ class DefinitionAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DefinitionViewHolder {
         val binding =
-            DefinitionItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            ItemDefinitionBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         binding.lifecycleOwner = parent.lifecycleOwner()
 
         return DefinitionViewHolder(binding)

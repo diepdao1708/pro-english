@@ -34,4 +34,17 @@
     <string name="search">Search</string>
     <string name="uk">UK</string>
     <string name="us">US</string>
+
+    <!--  Exam  -->
+    <string name="easy">Easy</string>
+    <string name="easy_level_basic_knowledge_test">Easy level, basic knowledge test</string>
+    <string name="medium">Medium</string>
+    <string name="moderate_level_knowledge_test_is_average">Moderate level, knowledge test is average</string>
+    <string name="hard">Hard</string>
+    <string name="difficult_level_test_knowledge_at_advanced">Difficult level, test knowledge at advanced</string>
+    <string name="question_success">question success</string>
+    <string name="question_failure">question failure</string>
+    <string name="check_answer">Check Answer</string>
+    <string name="save_score_success">save score success</string>
+    <string name="save_score_failure">save score failure</string>
 </resources>

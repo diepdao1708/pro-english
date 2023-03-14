@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.proenglish.databinding.LeaderboardItemBinding
+import com.example.proenglish.databinding.ItemLeaderboardBinding
 import com.example.proenglish.utils.lifecycleOwner
 import kotlinx.coroutines.flow.MutableStateFlow
 
@@ -12,7 +12,7 @@ class LeaderboardAdapter(
     private var leaderboards: List<LeaderboardItemUiState> = emptyList(),
 ) : RecyclerView.Adapter<LeaderboardAdapter.LeaderboardViewHolder>() {
 
-    inner class LeaderboardViewHolder(val binding: LeaderboardItemBinding) :
+    inner class LeaderboardViewHolder(val binding: ItemLeaderboardBinding) :
         RecyclerView.ViewHolder(binding.root) {
         private val cachedItem = MutableStateFlow<LeaderboardItemUiState?>(null)
 
@@ -27,7 +27,7 @@ class LeaderboardAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LeaderboardViewHolder {
         val binding =
-            LeaderboardItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            ItemLeaderboardBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         binding.lifecycleOwner = parent.lifecycleOwner()
 
         return LeaderboardViewHolder(binding)

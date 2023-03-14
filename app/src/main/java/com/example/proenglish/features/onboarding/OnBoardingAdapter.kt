@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.proenglish.databinding.OnboardingItemBinding
+import com.example.proenglish.databinding.ItemOnboardingBinding
 import com.example.proenglish.utils.lifecycleOwner
 import kotlinx.coroutines.flow.MutableStateFlow
 
@@ -12,7 +12,7 @@ class OnBoardingAdapter(
     private var onBoardings: List<OnBoardingData> = emptyList(),
 ) : RecyclerView.Adapter<OnBoardingAdapter.OnBoardingViewHolder>() {
 
-    inner class OnBoardingViewHolder(val binding: OnboardingItemBinding) :
+    inner class OnBoardingViewHolder(val binding: ItemOnboardingBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         private val cachedItem = MutableStateFlow<OnBoardingData?>(null)
@@ -28,7 +28,7 @@ class OnBoardingAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OnBoardingViewHolder {
         val binding =
-            OnboardingItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            ItemOnboardingBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         binding.lifecycleOwner = parent.lifecycleOwner()
         return OnBoardingViewHolder(binding)
     }

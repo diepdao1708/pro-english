@@ -11,6 +11,6 @@ interface QuestionService {
     suspend fun getQuestions(
         @Query("page") page: Int = 1,
         @Query("limit") limit: Int = 10,
-        @Query("level") level: String
+        @Query("level") level: String,
     ): CommonResponse<ListQuestionData>
 }

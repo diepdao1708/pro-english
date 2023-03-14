@@ -18,7 +18,7 @@ data class QuestionData(
     val answer2: String,
     val answer3: String,
     val answer4: String,
-    val correctAnswer: CorrectAnswer,
+    val correctAnswer: String,
     val number: Int,
 )
 
@@ -28,7 +28,7 @@ enum class Level(val value: String) {
     HARD("hard"),
 }
 
-enum class CorrectAnswer(val value: String) {
+enum class Answer(val value: String) {
     ANSWER1("answer1"),
     ANSWER2("answer2"),
     ANSWER3("answer3"),

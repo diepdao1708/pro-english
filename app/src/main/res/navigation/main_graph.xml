@@ -23,7 +23,11 @@
         android:id="@+id/examFragment"
         android:name="com.example.proenglish.features.exam.ExamFragment"
         android:label="ExamFragment"
-        tools:layout="@layout/fragment_exam" />
+        tools:layout="@layout/fragment_exam" >
+        <action
+            android:id="@+id/action_examFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+    </fragment>
     <fragment
         android:id="@+id/userFragment"
         android:name="com.example.proenglish.features.user.UserFragment"
@@ -38,6 +42,17 @@
             android:id="@+id/action_postDetailFragment_to_homeFragment"
             app:destination="@id/homeFragment"
             app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="com.example.proenglish.features.exam.question.QuestionFragment"
+        android:label="fragment_question"
+        tools:layout="@layout/fragment_question" >
+        <action
+            android:id="@+id/action_questionFragment_to_examFragment"
+            app:destination="@id/examFragment"
+            app:popUpTo="@id/examFragment"
             app:popUpToInclusive="true" />
     </fragment>
 </navigation>

@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.proenglish.databinding.MeaningItemBinding
+import com.example.proenglish.databinding.ItemMeaningBinding
 import com.example.proenglish.utils.lifecycleOwner
 import kotlinx.coroutines.flow.MutableStateFlow
 
@@ -13,7 +13,7 @@ class MeaningAdapter(
     private var meanings: List<MeaningItemUiState> = emptyList(),
 ) : RecyclerView.Adapter<MeaningAdapter.MeaningViewHolder>() {
 
-    inner class MeaningViewHolder(val binding: MeaningItemBinding) :
+    inner class MeaningViewHolder(val binding: ItemMeaningBinding) :
         RecyclerView.ViewHolder(binding.root) {
         private val cachedItem = MutableStateFlow<MeaningItemUiState?>(null)
         private val definitionAdapter: DefinitionAdapter by lazy {
@@ -36,7 +36,7 @@ class MeaningAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MeaningViewHolder {
-        val binding = MeaningItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ItemMeaningBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         binding.lifecycleOwner = parent.lifecycleOwner()
 
         return MeaningViewHolder(binding)

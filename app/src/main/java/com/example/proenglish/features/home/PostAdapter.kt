@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.proenglish.databinding.PostItemBinding
+import com.example.proenglish.databinding.ItemPostBinding
 import com.example.proenglish.utils.lifecycleOwner
 import kotlinx.coroutines.flow.MutableStateFlow
 
@@ -13,7 +13,7 @@ class PostAdapter(
     private val listener: OnClickListener,
 ) : RecyclerView.Adapter<PostAdapter.PostViewHolder>() {
 
-    inner class PostViewHolder(val binding: PostItemBinding) :
+    inner class PostViewHolder(val binding: ItemPostBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         private val cachedItem = MutableStateFlow<PostItemUiState?>(null)
@@ -34,7 +34,7 @@ class PostAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
-        val binding = PostItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ItemPostBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         binding.lifecycleOwner = parent.lifecycleOwner()
 
         return PostViewHolder(binding)
