@@ -13,7 +13,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.navigation.Navigation
 import com.example.proenglish.R
 import com.example.proenglish.databinding.FragmentExamBinding
-import com.example.proenglish.domain.models.Level
+import com.example.proenglish.data.models.Level
 import com.example.proenglish.features.exam.ExamViewModel.Event
 import com.example.proenglish.utils.launchRepeatOnLifecycle
 import dagger.hilt.android.AndroidEntryPoint

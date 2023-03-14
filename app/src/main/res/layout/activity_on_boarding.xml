@@ -13,7 +13,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/background"
+        android:background="@color/background_view"
         tools:context=".features.onboarding.OnBoardingActivity">
 
         <androidx.viewpager2.widget.ViewPager2
@@ -48,38 +48,41 @@
             android:layout_width="@dimen/icon_large"
             android:layout_height="@dimen/icon_large"
             android:layout_marginBottom="@dimen/margin_large"
-            android:background="@drawable/background_icon"
+            android:background="@drawable/ripple_primary"
             android:contentDescription="@string/app_name"
             android:elevation="@dimen/elevation"
             android:src="@drawable/arrow"
             app:layout_constraintBottom_toTopOf="@id/get_started_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:tint="@color/white" />
+            app:tint="@color/surface" />
 
-        <com.google.android.material.button.MaterialButton
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/get_started_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin_small"
-            android:backgroundTint="@color/theme_light_inverseSurface"
+            android:background="@drawable/ripple_primary"
             android:fontFamily="@font/roboto_medium"
             android:onClick="@{() -> viewModel.navigateToRegister()}"
             android:text="@string/get_started"
+            android:textColor="@color/surface"
             app:layout_constraintBottom_toTopOf="@id/login_button"
             app:layout_constraintEnd_toEndOf="@id/login_button"
             app:layout_constraintStart_toStartOf="@id/login_button" />
 
-        <com.google.android.material.button.MaterialButton
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/login_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin_large"
-            android:backgroundTint="#1F1F1F1F"
+            android:background="@drawable/ripple_secondary"
             android:fontFamily="@font/roboto_medium"
             android:onClick="@{() -> viewModel.navigateToLogin()}"
+            android:outlineProvider="none"
+            android:paddingHorizontal="@dimen/padding_large"
             android:text="@string/i_already_have_an_account"
-            android:textColor="@color/dark_color_text"
+            android:textColor="@color/primary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

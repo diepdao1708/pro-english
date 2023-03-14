@@ -3,7 +3,7 @@ package com.example.proenglish.features.dictionary
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.proenglish.R
-import com.example.proenglish.domain.repositories.DictionaryRepository
+import com.example.proenglish.data.repositories.DictionaryRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow

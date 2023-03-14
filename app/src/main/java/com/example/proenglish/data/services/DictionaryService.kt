@@ -1,6 +1,6 @@
-package com.example.proenglish.domain.services
+package com.example.proenglish.data.services
 
-import com.example.proenglish.domain.models.DictionaryData
+import com.example.proenglish.data.models.DictionaryData
 import retrofit2.http.GET
 import retrofit2.http.Path
 

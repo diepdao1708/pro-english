@@ -3,8 +3,8 @@ package com.example.proenglish.features.user
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.proenglish.R
-import com.example.proenglish.domain.repositories.AuthRepository
-import com.example.proenglish.domain.repositories.UserRepository
+import com.example.proenglish.data.repositories.AuthRepository
+import com.example.proenglish.data.repositories.UserRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow

@@ -12,7 +12,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import com.example.proenglish.R
 import com.example.proenglish.databinding.FragmentQuestionBinding
-import com.example.proenglish.domain.models.Answer
+import com.example.proenglish.data.models.Answer
 import com.example.proenglish.utils.LoadingUtils
 import com.example.proenglish.utils.launchRepeatOnLifecycle
 import dagger.hilt.android.AndroidEntryPoint

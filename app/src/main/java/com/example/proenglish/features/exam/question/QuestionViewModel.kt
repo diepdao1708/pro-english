@@ -4,9 +4,9 @@ import android.os.Bundle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.proenglish.R
-import com.example.proenglish.domain.models.Answer
-import com.example.proenglish.domain.repositories.QuestionRepository
-import com.example.proenglish.domain.repositories.UserRepository
+import com.example.proenglish.data.models.Answer
+import com.example.proenglish.data.repositories.QuestionRepository
+import com.example.proenglish.data.repositories.UserRepository
 import com.example.proenglish.features.exam.ExamViewModel.Companion.LEVEL_DATA
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.delay

@@ -6,7 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.proenglish.R
-import com.example.proenglish.domain.repositories.AuthRepositoryImpl.Companion.ACCESS_TOKEN
+import com.example.proenglish.data.repositories.AuthRepositoryImpl.Companion.ACCESS_TOKEN
 import com.example.proenglish.features.splash.SplashViewModel.Companion.DEFAULT_VALUE
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import dagger.hilt.android.lifecycle.HiltViewModel

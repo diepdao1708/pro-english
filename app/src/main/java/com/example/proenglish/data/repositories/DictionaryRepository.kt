@@ -1,7 +1,7 @@
-package com.example.proenglish.domain.repositories
+package com.example.proenglish.data.repositories
 
-import com.example.proenglish.domain.models.DictionaryData
-import com.example.proenglish.domain.services.DictionaryService
+import com.example.proenglish.data.models.DictionaryData
+import com.example.proenglish.data.services.DictionaryService
 import retrofit2.Retrofit
 import javax.inject.Inject
 

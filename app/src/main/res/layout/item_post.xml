@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/margin_medium"
         android:layout_marginVertical="@dimen/margin_small"
-        app:cardBackgroundColor="@color/theme_light_background"
+        app:cardBackgroundColor="@color/background"
         app:cardElevation="@dimen/elevation"
         app:strokeWidth="0dp">
 
@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_medium"
                 android:text="@{item.title}"
-                android:textColor="@color/dark_color_text"
+                android:textColor="@color/on_surface"
                 android:textSize="@dimen/title_large" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -71,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_regular"
                 android:text="@{item.description}"
-                android:textColor="@color/dark_color_text"
+                android:textColor="@color/on_surface"
                 android:textSize="@dimen/title_medium" />
         </LinearLayout>
 

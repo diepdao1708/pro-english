@@ -31,7 +31,7 @@
             android:iconifiedByDefault="false"
             android:queryBackground="@android:color/transparent"
             android:queryHint="@string/search"
-            android:textColor="@color/dark_color_text"
+            android:textColor="@color/on_surface"
             android:textSize="@dimen/title_medium"
             app:layout_constraintTop_toTopOf="parent" />
 

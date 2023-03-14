@@ -6,8 +6,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.proenglish.R
-import com.example.proenglish.domain.models.LoginData
-import com.example.proenglish.domain.repositories.AuthRepository
+import com.example.proenglish.data.models.LoginData
+import com.example.proenglish.data.repositories.AuthRepository
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInStatusCodes

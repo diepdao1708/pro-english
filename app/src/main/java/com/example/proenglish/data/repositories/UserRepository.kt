@@ -1,8 +1,8 @@
-package com.example.proenglish.domain.repositories
+package com.example.proenglish.data.repositories
 
-import com.example.proenglish.domain.models.LeaderboardData
-import com.example.proenglish.domain.models.ScoreData
-import com.example.proenglish.domain.services.UserService
+import com.example.proenglish.data.models.LeaderboardData
+import com.example.proenglish.data.models.ScoreData
+import com.example.proenglish.data.services.UserService
 import retrofit2.Retrofit
 import javax.inject.Inject
 

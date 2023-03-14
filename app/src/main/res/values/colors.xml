@@ -1,38 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="theme_light_primary">#FF8B418F</color>
-    <color name="theme_light_onPrimary">#FFFFFF</color>
-    <color name="theme_light_primaryContainer">#FFFFD6FA</color>
-    <color name="theme_light_onPrimaryContainer">#FF36003C</color>
+    <color name="primary">#FF6949FF</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="primary_variant">#FF3700B3</color>
 
-    <color name="theme_light_secondary">#FFA23F16</color>
-    <color name="theme_light_onSecondary">#FFFFFF</color>
-    <color name="theme_light_secondaryContainer">#FFFFDBCF</color>
-    <color name="theme_light_onSecondaryContainer">#FF380D00</color>
+    <color name="secondary">#FF03DAC6</color>
+    <color name="on_secondary">#FF000000</color>
+    <color name="secondary_variant">#FF018786</color>
 
-    <color name="theme_light_tertiary">#FF006780</color>
-    <color name="theme_light_onTertiary">#FFFFFF</color>
-    <color name="theme_light_tertiaryContainer">#FFB8EAFF</color>
-    <color name="theme_light_onTertiaryContainer">#FF001F28</color>
+    <color name="error">#FFB00020</color>
+    <color name="on_error">#FFFFFF</color>
 
-    <color name="theme_light_error">#FFBA1A1A</color>
-    <color name="theme_light_onError">#FFFFFF</color>
-    <color name="theme_light_errorContainer">#FFFFDAD6</color>
-    <color name="theme_light_onErrorContainer">#FF410002</color>
+    <color name="background">#FFFCFCFC</color>
+    <color name="on_background">#FF201A1B</color>
 
-    <color name="theme_light_background">#FFFCFCFC</color>
-    <color name="theme_light_onBackground">#FF201A1B</color>
+    <color name="surface">#FFFCFCFC</color>
+    <color name="on_surface">#FF201A1B</color>
 
-    <color name="theme_light_surface">#FFFCFCFC</color>
-    <color name="theme_light_onSurface">#FF201A1B</color>
-
-    <color name="theme_light_surfaceVariant">#FFEDDEE8</color>
-    <color name="theme_light_onSurfaceVariant">#FF4D444C</color>
-
-    <color name="theme_light_inverseSurface">#FF362F30</color>
-    <color name="theme_light_inverseOnSurface">#FFFAEEEF</color>
-    <color name="theme_light_outline">#FF7F747C</color>
-    <color name="black">#000000</color>
-    <color name="white">#FFFFFF</color>
-    <color name="dark_color_text">#FF201A1B</color>
+    <color name="background_view">#FFF0EDFF</color>
+    <color name="ripple">#CECECF</color>
 </resources>

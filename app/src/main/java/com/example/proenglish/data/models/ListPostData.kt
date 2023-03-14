@@ -1,4 +1,4 @@
-package com.example.proenglish.domain.models
+package com.example.proenglish.data.models
 
 import com.google.gson.annotations.SerializedName
 import java.util.Date

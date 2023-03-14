@@ -5,7 +5,7 @@ import androidx.core.os.bundleOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.proenglish.R
-import com.example.proenglish.domain.repositories.PostRepository
+import com.example.proenglish.data.repositories.PostRepository
 import com.example.proenglish.utils.formatDate
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel

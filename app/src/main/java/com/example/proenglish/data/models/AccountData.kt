@@ -1,4 +1,4 @@
-package com.example.proenglish.domain.models
+package com.example.proenglish.data.models
 
 import com.example.proenglish.utils.JWTHelper
 

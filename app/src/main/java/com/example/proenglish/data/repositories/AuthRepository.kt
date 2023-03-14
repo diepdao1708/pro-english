@@ -1,10 +1,10 @@
-package com.example.proenglish.domain.repositories
+package com.example.proenglish.data.repositories
 
 import android.content.SharedPreferences
 import android.util.Log
 import androidx.core.content.edit
-import com.example.proenglish.domain.models.*
-import com.example.proenglish.domain.services.AuthService
+import com.example.proenglish.data.models.*
+import com.example.proenglish.data.services.AuthService
 import retrofit2.Retrofit
 import javax.inject.Inject
 

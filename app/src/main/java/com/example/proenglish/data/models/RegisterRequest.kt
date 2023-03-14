@@ -1,4 +1,4 @@
-package com.example.proenglish.domain.models
+package com.example.proenglish.data.models
 
 data class RegisterRequest(
     val email: String,

@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.proenglish.R
 import com.example.proenglish.databinding.ItemQuestionBinding
-import com.example.proenglish.domain.models.Answer
+import com.example.proenglish.data.models.Answer
 import com.example.proenglish.utils.lifecycleOwner
 import kotlinx.coroutines.flow.MutableStateFlow
 

@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.core.os.bundleOf
 import androidx.lifecycle.ViewModel
 import com.example.proenglish.R
-import com.example.proenglish.domain.models.Level
+import com.example.proenglish.data.models.Level
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.receiveAsFlow

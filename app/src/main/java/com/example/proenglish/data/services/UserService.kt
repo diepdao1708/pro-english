@@ -1,8 +1,8 @@
-package com.example.proenglish.domain.services
+package com.example.proenglish.data.services
 
-import com.example.proenglish.domain.models.CommonResponse
-import com.example.proenglish.domain.models.LeaderboardData
-import com.example.proenglish.domain.models.ScoreData
+import com.example.proenglish.data.models.CommonResponse
+import com.example.proenglish.data.models.LeaderboardData
+import com.example.proenglish.data.models.ScoreData
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.PATCH

@@ -1,7 +1,7 @@
-package com.example.proenglish.domain.repositories
+package com.example.proenglish.data.repositories
 
-import com.example.proenglish.domain.models.ListPostData
-import com.example.proenglish.domain.services.PostService
+import com.example.proenglish.data.models.ListPostData
+import com.example.proenglish.data.services.PostService
 import retrofit2.Retrofit
 import javax.inject.Inject
 

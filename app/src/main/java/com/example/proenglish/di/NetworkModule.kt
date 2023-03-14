@@ -1,8 +1,8 @@
 package com.example.proenglish.di
 
 import com.example.proenglish.BuildConfig
-import com.example.proenglish.domain.core.Const
-import com.example.proenglish.domain.models.SavedAccount
+import com.example.proenglish.data.core.Const
+import com.example.proenglish.data.models.SavedAccount
 import com.example.proenglish.utils.AppEvent
 import com.example.proenglish.utils.GsonUTCDateAdapter
 import com.google.gson.FieldNamingPolicy

@@ -1,7 +1,7 @@
-package com.example.proenglish.domain.services
+package com.example.proenglish.data.services
 
-import com.example.proenglish.domain.models.CommonResponse
-import com.example.proenglish.domain.models.ListPostData
+import com.example.proenglish.data.models.CommonResponse
+import com.example.proenglish.data.models.ListPostData
 import retrofit2.http.GET
 import retrofit2.http.Query
 

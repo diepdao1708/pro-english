@@ -3,7 +3,7 @@
 
     <stroke
         android:width="@dimen/width_stroke"
-        android:color="@color/theme_light_outline" />
+        android:color="@color/primary" />
     <padding
         android:bottom="@dimen/padding_medium"
         android:top="@dimen/padding_medium" />

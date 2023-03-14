@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/margin_medium"
             android:layout_marginVertical="@dimen/margin_small"
-            app:cardBackgroundColor="@color/theme_light_background"
+            app:cardBackgroundColor="@color/background"
             app:cardElevation="@dimen/elevation"
             app:layout_constraintTop_toTopOf="parent"
             app:strokeWidth="0dp">
@@ -37,7 +37,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
                     android:text="@string/easy"
-                    android:textColor="@color/dark_color_text"
+                    android:textColor="@color/on_surface"
                     android:textSize="@dimen/title_large" />
 
                 <TextView
@@ -45,7 +45,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_regular"
                     android:text="@string/easy_level_basic_knowledge_test"
-                    android:textColor="@color/dark_color_text"
+                    android:textColor="@color/on_surface"
                     android:textSize="@dimen/title_medium" />
             </LinearLayout>
 
@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/margin_medium"
             android:layout_marginVertical="@dimen/margin_small"
-            app:cardBackgroundColor="@color/theme_light_background"
+            app:cardBackgroundColor="@color/background"
             app:cardElevation="@dimen/elevation"
             app:layout_constraintTop_toBottomOf="@id/easy_card_view"
             app:strokeWidth="0dp">
@@ -73,7 +73,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
                     android:text="@string/medium"
-                    android:textColor="@color/dark_color_text"
+                    android:textColor="@color/on_surface"
                     android:textSize="@dimen/title_large" />
 
                 <TextView
@@ -81,7 +81,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_regular"
                     android:text="@string/moderate_level_knowledge_test_is_average"
-                    android:textColor="@color/dark_color_text"
+                    android:textColor="@color/on_surface"
                     android:textSize="@dimen/title_medium" />
             </LinearLayout>
 
@@ -93,7 +93,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/margin_medium"
             android:layout_marginVertical="@dimen/margin_small"
-            app:cardBackgroundColor="@color/theme_light_background"
+            app:cardBackgroundColor="@color/background"
             app:cardElevation="@dimen/elevation"
             app:layout_constraintTop_toBottomOf="@id/medium_card_view"
             app:strokeWidth="0dp">
@@ -109,7 +109,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
                     android:text="@string/hard"
-                    android:textColor="@color/dark_color_text"
+                    android:textColor="@color/on_surface"
                     android:textSize="@dimen/title_large" />
 
                 <TextView
@@ -117,7 +117,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_regular"
                     android:text="@string/difficult_level_test_knowledge_at_advanced"
-                    android:textColor="@color/dark_color_text"
+                    android:textColor="@color/on_surface"
                     android:textSize="@dimen/title_medium" />
             </LinearLayout>
 

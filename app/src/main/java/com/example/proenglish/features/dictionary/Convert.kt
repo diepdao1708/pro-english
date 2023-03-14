@@ -1,8 +1,8 @@
 package com.example.proenglish.features.dictionary
 
-import com.example.proenglish.domain.models.DictionaryData
-import com.example.proenglish.domain.models.Meaning
-import com.example.proenglish.domain.models.Phonetic
+import com.example.proenglish.data.models.DictionaryData
+import com.example.proenglish.data.models.Meaning
+import com.example.proenglish.data.models.Phonetic
 
 object Convert {
     fun convertToDictionaryUiState(dictionary: DictionaryData): DictionaryUiState {

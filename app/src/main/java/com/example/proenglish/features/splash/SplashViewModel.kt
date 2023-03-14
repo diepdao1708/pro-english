@@ -1,13 +1,14 @@
 package com.example.proenglish.features.splash
 
+import android.content.ContentValues.TAG
 import android.content.SharedPreferences
 import android.util.Log
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.proenglish.domain.repositories.AuthRepositoryImpl.Companion.ACCESS_TOKEN
+import com.example.proenglish.data.repositories.AuthRepositoryImpl.Companion.ACCESS_TOKEN
 import com.example.proenglish.utils.JWTHelper
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.channels.Channel
+import kotlinx.coroutines.flow.receiveAsFlow
 import javax.inject.Inject
 
 @HiltViewModel
@@ -24,17 +25,17 @@ class SplashViewModel @Inject constructor(
         object NavigateToOnBoarding : Event()
     }
 
-    private val _event = MutableLiveData<Event>()
-    val event: LiveData<Event> = _event
+    private val _events = Channel<Event>(capacity = Channel.UNLIMITED)
+    val events = _events.receiveAsFlow()
 
     fun checkLogin() {
         val accessToken = sharedPreferences.getString(ACCESS_TOKEN, DEFAULT_VALUE)
-        Log.d("TAG", accessToken.toString())
+        Log.d(TAG, accessToken.toString())
         when {
             accessToken == DEFAULT_VALUE
                     || accessToken == null
-                    || JWTHelper.expiredAccessToken(accessToken) -> _event.postValue(Event.NavigateToOnBoarding)
-            else -> _event.postValue(Event.NavigateToHome)
+                    || JWTHelper.expiredAccessToken(accessToken) -> _events.trySend(Event.NavigateToOnBoarding)
+            else -> _events.trySend(Event.NavigateToHome)
         }
     }
 }

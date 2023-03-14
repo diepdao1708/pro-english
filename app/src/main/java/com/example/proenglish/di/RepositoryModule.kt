@@ -1,6 +1,6 @@
 package com.example.proenglish.di
 
-import com.example.proenglish.domain.repositories.*
+import com.example.proenglish.data.repositories.*
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

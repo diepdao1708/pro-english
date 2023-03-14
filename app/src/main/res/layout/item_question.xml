@@ -7,7 +7,7 @@
 
         <import type="kotlinx.coroutines.flow.StateFlow" />
 
-        <import type="com.example.proenglish.domain.models.Answer" />
+        <import type="com.example.proenglish.data.models.Answer" />
 
         <import type="com.example.proenglish.features.exam.question.QuestionItemUiState" />
 
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_medium"
             android:text="@{item.questionContent}"
-            android:textColor="@color/dark_color_text"
+            android:textColor="@color/on_surface"
             android:textSize="@dimen/title_large"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -40,7 +40,7 @@
             android:fontFamily="@font/roboto_medium"
             android:gravity="center_vertical"
             android:text="@{item.answer1}"
-            android:textColor="@color/dark_color_text"
+            android:textColor="@color/on_surface"
             app:layout_constraintTop_toBottomOf="@id/content_txt"
             tools:ignore="SpeakableTextPresentCheck" />
 
@@ -53,7 +53,7 @@
             android:fontFamily="@font/roboto_medium"
             android:gravity="center_vertical"
             android:text="@{item.answer2}"
-            android:textColor="@color/dark_color_text"
+            android:textColor="@color/on_surface"
             app:layout_constraintTop_toBottomOf="@id/answers1_button"
             tools:ignore="SpeakableTextPresentCheck" />
 
@@ -66,7 +66,7 @@
             android:fontFamily="@font/roboto_medium"
             android:gravity="center_vertical"
             android:text="@{item.answer3}"
-            android:textColor="@color/dark_color_text"
+            android:textColor="@color/on_surface"
             app:layout_constraintTop_toBottomOf="@id/answers2_button"
             tools:ignore="SpeakableTextPresentCheck" />
 
@@ -79,7 +79,7 @@
             android:fontFamily="@font/roboto_medium"
             android:gravity="center_vertical"
             android:text="@{item.answer4}"
-            android:textColor="@color/dark_color_text"
+            android:textColor="@color/on_surface"
             app:layout_constraintTop_toBottomOf="@id/answers3_button"
             tools:ignore="SpeakableTextPresentCheck" />
 

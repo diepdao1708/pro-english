@@ -1,9 +1,10 @@
-package com.example.proenglish.domain.models
+package com.example.proenglish.data.models
 
 import com.google.gson.annotations.SerializedName
 
-data class RegisterData(
+data class CommonResponse<D>(
     @SerializedName("statusCode")
     val statusCode: Int,
     val message: String,
+    val data: D
 )
